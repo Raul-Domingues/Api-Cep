@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'api-cep';
 
   constructor(private http: HttpClient) {
-    console.log(this.getCep('86990000'))
+    // console.log(this.getCep('86990000'))
   }
 
   getCep (cep: string) {
