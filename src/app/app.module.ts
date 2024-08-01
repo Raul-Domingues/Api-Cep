@@ -3,7 +3,11 @@ import {
   BrowserModule,
   provideClientHydration,
 } from '@angular/platform-browser';
-import { provideHttpClient, withFetch, HttpClientModule } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withFetch,
+  HttpClientModule,
+} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
@@ -13,10 +17,20 @@ import { AddOnsComponent } from './steps/add-ons/add-ons.component';
 import { SummaryComponent } from './steps/summary/summary.component';
 import { FormDoneComponent } from './steps/form-done/form-done.component';
 import { StepDisplayComponent } from './steps/step-display/step-display.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, PersonalInfoComponent, SelectPlanComponent, AddOnsComponent, SummaryComponent, FormDoneComponent, StepDisplayComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    FormComponent,
+    PersonalInfoComponent,
+    SelectPlanComponent,
+    AddOnsComponent,
+    SummaryComponent,
+    FormDoneComponent,
+    StepDisplayComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, RouterModule],
   providers: [provideClientHydration(), provideHttpClient(withFetch())],
   bootstrap: [AppComponent],
 })

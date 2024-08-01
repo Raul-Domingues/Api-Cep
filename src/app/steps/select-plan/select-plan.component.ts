@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './select-plan.component.html',
   styleUrl: './select-plan.component.scss'
 })
-export class SelectPlanComponent {
-
-}
+export class SelectPlanComponent {}

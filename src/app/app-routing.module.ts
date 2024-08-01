@@ -6,7 +6,7 @@ import { AddOnsComponent } from './steps/add-ons/add-ons.component';
 import { SummaryComponent } from './steps/summary/summary.component';
 import { FormDoneComponent } from './steps/form-done/form-done.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: PersonalInfoComponent,

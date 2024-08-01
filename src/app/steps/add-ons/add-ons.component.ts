@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './add-ons.component.html',
   styleUrl: './add-ons.component.scss'
 })
-export class AddOnsComponent {
-
-}
+export class AddOnsComponent {}

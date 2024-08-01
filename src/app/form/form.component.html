@@ -1,4 +1,4 @@
-<main>
+<!-- <main>
   <section *ngIf="step1" class="step-1 step">
     <section class="steps-display">
       <div class="step-text">
@@ -53,7 +53,7 @@
         </div>
 
         <div class="input-area">
-          <div class="other-label-area">
+          <div class="label-area mt-4">
             <p class="label">E-mail</p>
           </div>
 
@@ -65,7 +65,7 @@
         </div>
 
         <div class="input-area">
-          <div class="other-label-area">
+          <div class="label-area mt-4">
             <p class="label">Celular</p>
           </div>
           <input type="text" placeholder="ex. 4499999999" id="phone" />
@@ -85,6 +85,105 @@
   </section>
 
   <section *ngIf="step2" class="step-2 step">
+    <section class="steps-display">
+      <div class="step-text">
+        <div class="step-number">1</div>
+
+        <div class="step-name">
+          <p class="step-num">Step 1</p>
+          <p class="step-name-text">Your info</p>
+        </div>
+      </div>
+
+      <div class="step-text">
+        <div class="step-number current-step">2</div>
+
+        <div class="step-name">
+          <p class="step-num">Step 2</p>
+          <p class="step-name-text">Select plan</p>
+        </div>
+      </div>
+
+      <div class="step-text">
+        <div class="step-number">3</div>
+
+        <div class="step-name">
+          <p class="step-num">Step 3</p>
+          <p class="step-name-text">Add-ons</p>
+        </div>
+      </div>
+
+      <div class="step-text">
+        <div class="step-number">4</div>
+
+        <div class="step-name">
+          <p class="step-num">Step 4</p>
+          <p class="step-name-text">Summary</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step-form-section">
+      <section class="step-text-section">
+        <h1 class="step-heading">Pick add-ons</h1>
+        <p class="description">Add-ons help enhance your gaming experience.</p>
+
+        <section class="step-2-option-section">
+          <div class="step-2-option">
+            <div class="left-section">
+              <div class="click-option"></div>
+
+              <div class="add-on-text">
+                <p class="add-on">Online Service</p>
+                <p class="add-on-description">Access to multiplayer games</p>
+              </div>
+            </div>
+
+            <div class="price-section">
+              <p>+$<span class="add-on-price">1</span>/mo</p>
+            </div>
+          </div>
+
+          <div class="step-2-option">
+            <div class="left-section">
+              <div class="click-option"></div>
+
+              <div class="add-on-text">
+                <p class="add-on">Larger storage</p>
+                <p class="add-on-description">Extra 1TB of cloud save</p>
+              </div>
+            </div>
+
+            <div class="price-section">
+              <p>+$<span class="add-on-price">2</span>/mo</p>
+            </div>
+          </div>
+
+          <div class="step-2-option">
+            <div class="left-section">
+              <div class="click-option"></div>
+
+              <div class="add-on-text">
+                <p class="add-on">Customizable Profile</p>
+                <p class="add-on-description">Custom theme on your profile</p>
+              </div>
+            </div>
+
+            <div class="price-section">
+              <p>+$<span class="add-on-price">2</span>/mo</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="step-button-area step-2-button-area">
+        <button class="go-back-btn" (click)="goToStep1()">Go Back</button>
+        <button class="next-step-btn step-2-btn" (click)="goToStep3()">Próximo passo</button>
+      </section>
+    </section>
+  </section>
+
+  <section *ngIf="step3" class="step-3 step">
     <section class="steps-display">
       <div class="step-text">
         <div class="step-number">1</div>
@@ -130,8 +229,8 @@
           You have the option of monthly or yearly billing.
         </p>
 
-        <section class="step-2-option-section">
-          <div class="step-2-option option-clicked">
+        <section class="step-3-option-section">
+          <div class="step-3-option option-clicked">
             <img src="../../assets/icon-arcade.svg" alt="" />
             <div class="option-text">
               <h2 class="planName">Arcade</h2>
@@ -142,7 +241,7 @@
             </div>
           </div>
 
-          <div class="step-2-option">
+          <div class="step-3-option">
             <img src="../../assets/icon-advanced.svg" alt="" />
             <div class="option-text">
               <h2 class="planName">Advanced</h2>
@@ -153,7 +252,7 @@
             </div>
           </div>
 
-          <div class="step-2-option">
+          <div class="step-3-option">
             <img src="../../assets/icon-pro.svg" alt="" />
             <div class="option-text">
               <h2 class="planName">Pro</h2>
@@ -174,108 +273,9 @@
         </section>
       </section>
 
-      <section class="step-button-area step-2-button-area">
-        <button class="go-back-btn" (click)="goToStep1()">Go Back</button>
-        <button class="next-step-btn step-2-btn" (click)="goToStep3()">Próximo passo</button>
-      </section>
-    </section>
-  </section>
-
-  <section *ngIf="step3" class="step-3 step">
-    <section class="steps-display">
-      <div class="step-text">
-        <div class="step-number">1</div>
-
-        <div class="step-name">
-          <p class="step-num">Step 1</p>
-          <p class="step-name-text">Your info</p>
-        </div>
-      </div>
-
-      <div class="step-text">
-        <div class="step-number">2</div>
-
-        <div class="step-name">
-          <p class="step-num">Step 2</p>
-          <p class="step-name-text">Select plan</p>
-        </div>
-      </div>
-
-      <div class="step-text">
-        <div class="step-number current-step">3</div>
-
-        <div class="step-name">
-          <p class="step-num">Step 3</p>
-          <p class="step-name-text">Add-ons</p>
-        </div>
-      </div>
-
-      <div class="step-text">
-        <div class="step-number">4</div>
-
-        <div class="step-name">
-          <p class="step-num">Step 4</p>
-          <p class="step-name-text">Summary</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="step-form-section">
-      <section class="step-text-section">
-        <h1 class="step-heading">Pick add-ons</h1>
-        <p class="description">Add-ons help enhance your gaming experience.</p>
-
-        <section class="step-3-option-section">
-          <div class="step-3-option">
-            <div class="left-section">
-              <div class="click-option"></div>
-
-              <div class="add-on-text">
-                <p class="add-on">Online Service</p>
-                <p class="add-on-description">Access to multiplayer games</p>
-              </div>
-            </div>
-
-            <div class="price-section">
-              <p>+$<span class="add-on-price">1</span>/mo</p>
-            </div>
-          </div>
-
-          <div class="step-3-option">
-            <div class="left-section">
-              <div class="click-option"></div>
-
-              <div class="add-on-text">
-                <p class="add-on">Larger storage</p>
-                <p class="add-on-description">Extra 1TB of cloud save</p>
-              </div>
-            </div>
-
-            <div class="price-section">
-              <p>+$<span class="add-on-price">2</span>/mo</p>
-            </div>
-          </div>
-
-          <div class="step-3-option">
-            <div class="left-section">
-              <div class="click-option"></div>
-
-              <div class="add-on-text">
-                <p class="add-on">Customizable Profile</p>
-                <p class="add-on-description">Custom theme on your profile</p>
-              </div>
-            </div>
-
-            <div class="price-section">
-              <p>+$<span class="add-on-price">2</span>/mo</p>
-            </div>
-          </div>
-        </section>
-      </section>
-
-      <section class="step-button-area step-2-button-area">
+      <section class="step-button-area step-3-button-area">
         <button class="go-back-btn" (click)="goToStep2()">Go Back</button>
-        <button class="next-step-btn step-3-btn" (click)="goToStep4()">Próximo passo</button>
+        <button class="next-step-btn step-2-btn" (click)="goToStep4()">Próximo passo</button>
       </section>
     </section>
   </section>
@@ -401,4 +401,4 @@
       </p>
     </section>
   </section>
-</main>
+</main> -->
