@@ -40,7 +40,7 @@
   <section class="step-form-section">
     <section class="step-text-section">
       <h1 class="step-heading">Endereço</h1>
-      <p class="description">Insira o seu endereço completo.</p>
+      <p class="description mb-0">Insira o seu endereço completo.</p>
 
       <form>
         <div class="input-area">
@@ -68,8 +68,15 @@
           </div>
           <input type="text" placeholder="ex. Centro" id="bairro" />
         </div>
+
+        <div class="input-area">
+          <div class="label-area mt-3">
+            <p class="label mb-0">Cidade/Estado</p>
+          </div>
+          <input type="text" placeholder="ex. Maringá-PR" id="cidade" />
+        </div>
   
-        <section class="step-button-area step-2-button-area">
+        <section class="step-button-area step-2-button-area mt-4">
           <button class="go-back-btn" routerLink="/">Voltar</button>
           <button class="next-step-btn step-1-btn" type="submit" routerLink="/select-plan">
             Próximo passo

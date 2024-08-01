@@ -39,16 +39,21 @@
 
   <section class="step-form-section">
     <h1 class="step-heading">Informações pessoais</h1>
-    <p class="description mb-0">
+    <p class="description m-0">
       Forneça seu nome, endereço de e-mail e número de celular.
     </p>
 
-    <form>
+    <form [formGroup]="form" (ngSubmit)="enviarDados()">
       <div class="input-area">
         <div class="label-area">
           <p class="label mb-0">Nome</p>
         </div>
-        <input type="text" placeholder="ex. Raul Domingues" id="name" />
+        <input
+          type="text"
+          placeholder="ex. Raul Domingues"
+          id="name"
+          formControlName="nome"
+        />
       </div>
 
       <div class="input-area">
@@ -60,6 +65,7 @@
           type="email"
           placeholder="ex. raulhdomingues@gmail.com"
           id="email"
+          formControlName="email"
         />
       </div>
 
@@ -67,11 +73,16 @@
         <div class="label-area mt-3">
           <p class="label mb-0">Celular</p>
         </div>
-        <input type="text" placeholder="ex. 4499999999" id="phone" />
+        <input
+          type="text"
+          placeholder="ex. 4499999999"
+          id="phone"
+          formControlName="celular"
+        />
       </div>
 
-      <section class="step-button-area step-1-button-area">
-        <button class="next-step-btn step-1-btn" type="submit" routerLink="/address">
+      <section class="step-button-area step-1-button-area mt-5">
+        <button class="next-step-btn step-1-btn" type="submit">
           Próximo passo
         </button>
       </section>

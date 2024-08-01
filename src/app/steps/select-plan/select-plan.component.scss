@@ -1,0 +1,71 @@
+.step-2-option-section {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step-2-option {
+  width: 136px;
+  border: 1px solid #9699ab;
+  border-radius: 10px;
+  padding: 19px 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.15s ease-in-out;
+}
+
+.option-clicked {
+  background-color: #f0f6ff;
+  border-color: #473dff;
+}
+
+.step-2-option:hover {
+  border-color: #473dff;
+}
+
+.step-2-option img {
+  width: 40px;
+  height: 40px;
+}
+
+.step-2-option h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #02295a;
+}
+
+.step-2-button-area {
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 960px) {
+  .step-2-option-section {
+    gap: 10px;
+  }
+  .step-2-option {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .step-2-button-area {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .step-2-option-section {
+    margin-top: 22px;
+    flex-direction: column;
+  }
+  .step-2-option {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+  }
+}

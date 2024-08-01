@@ -16,6 +16,7 @@ import { AddressComponent } from './steps/address/address.component';
 import { SelectPlanComponent } from './steps/select-plan/select-plan.component';
 import { SummaryComponent } from './steps/summary/summary.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,13 @@ import { RouterModule } from '@angular/router';
     SelectPlanComponent,
     SummaryComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, RouterModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    RouterModule,
+    ReactiveFormsModule,
+  ],
   providers: [provideClientHydration(), provideHttpClient(withFetch())],
   bootstrap: [AppComponent],
 })

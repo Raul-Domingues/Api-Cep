@@ -175,43 +175,33 @@ input::placeholder {
   color: #eaffff;
 }
 
-.step-2-option-section {
-  margin-top: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+// .step-3-option-section {
+//   margin-top: 40px;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 18px;
+// }
 
-.step-2-option {
-  width: 136px;
-  border: 1px solid #9699ab;
-  border-radius: 10px;
-  padding: 19px 15px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: 0.15s ease-in-out;
-}
+// .step-3-option {
+//   width: 100%;
+//   border: 1px solid #d6d9e6;
+//   height: 79px;
+//   border-radius: 8px;
+//   padding: 19px 23px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   cursor: pointer;
+// }
 
-.step-2-option:hover {
-  border-color: #473dff;
-}
+// .step-3-active {
+//   border-color: #473dff;
+//   background-color: #f8f9fe;
+// }
 
 .option-text {
   margin-top: 37px;
-}
-
-.step-2-option img {
-  width: 40px;
-  height: 40px;
-}
-
-.step-2-option h2 {
-  font-size: 16px;
-  font-weight: 500;
-  color: #02295a;
 }
 
 .price,
@@ -226,11 +216,6 @@ input::placeholder {
 //   display: none;
 // }
 
-.option-clicked {
-  background-color: #f0f6ff;
-  border-color: #473dff;
-}
-
 .go-back-btn {
   background-color: #fff;
   color: #9699ab;
@@ -240,10 +225,6 @@ input::placeholder {
 .go-back-btn:hover {
   transform: translateY(-2px);
   color: #02295a;
-}
-
-.step-2-button-area {
-  justify-content: space-between;
 }
 
 .toggle-section {
@@ -284,26 +265,6 @@ input::placeholder {
   color: #02295a;
 }
 
-.step-3-option-section {
-  margin-top: 40px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.step-3-option {
-  width: 100%;
-  border: 1px solid #d6d9e6;
-  height: 79px;
-  border-radius: 8px;
-  padding: 19px 23px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
 .left-section {
   display: flex;
   align-items: center;
@@ -332,11 +293,6 @@ input::placeholder {
 .add-on-description {
   margin-top: 3px;
   color: #9699ab;
-}
-
-.step-3-active {
-  border-color: #473dff;
-  background-color: #f8f9fe;
 }
 
 .confirm-btn {
@@ -435,56 +391,27 @@ input::placeholder {
   font-weight: 700;
 }
 
-.step-5-text-section {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 634px;
-}
 
-.step-5-text-section img {
-  width: 80px;
-  height: 80px;
-}
-
-.step-5-text-section .step-heading {
-  margin-top: 32px;
-}
-
-.step-5-text-section .description {
-  line-height: 1.8rem;
-}
 
 @media screen and (max-width: 960px) {
   main {
     width: 95%;
   }
-  .steps-display,
-  .step-5-display {
+  .steps-display {
     width: 230px;
     padding: 40px 10px 40px 32px;
   }
   .step-form-section {
     padding: 16px 60px;
   }
-  .step-2-option-section {
-    gap: 10px;
-  }
-  .step-2-option {
-    width: 100%;
-  }
+
   .step-1-button-area {
     margin-top: 60px;
   }
 }
 
 @media screen and (max-width: 913px) {
-  .step-5-display {
-    width: 230px;
-    padding: 40px 20px 40px 32px;
-  }
+  
   .step-form-section {
     width: 60%;
   }
@@ -527,25 +454,9 @@ input::placeholder {
   .step {
     height: auto;
   }
-  .step-2-button-area {
-    margin-top: 50px;
-  }
-  .step-5-text-section {
-    padding: 75px 20px;
-  }
 }
 
 @media screen and (max-width: 550px) {
-  .step-2-option-section {
-    margin-top: 22px;
-    flex-direction: column;
-  }
-  .step-2-option {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-  }
   .option-text {
     margin-top: 0;
   }
@@ -565,4 +476,3 @@ input::placeholder {
     margin-top: 24px;
   }
 }
-
