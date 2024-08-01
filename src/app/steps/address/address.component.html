@@ -1,0 +1,81 @@
+<section class="step-2 step">
+  <section class="steps-display">
+    <div class="step-text">
+      <div class="step-number">1</div>
+
+      <div class="step-name">
+        <p class="step-num">Passo 1</p>
+        <p class="step-name-text">Suas informações</p>
+      </div>
+    </div>
+
+    <div class="step-text">
+      <div class="step-number current-step">2</div>
+
+      <div class="step-name">
+        <p class="step-num">Passo 2</p>
+        <p class="step-name-text">Seu endereço</p>
+      </div>
+    </div>
+
+    <div class="step-text">
+      <div class="step-number">3</div>
+
+      <div class="step-name">
+        <p class="step-num">Passo 3</p>
+        <p class="step-name-text">Selecione um plano</p>
+      </div>
+    </div>
+
+    <div class="step-text">
+      <div class="step-number">4</div>
+
+      <div class="step-name">
+        <p class="step-num">Passo 4</p>
+        <p class="step-name-text">Resumo</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="step-form-section">
+    <section class="step-text-section">
+      <h1 class="step-heading">Endereço</h1>
+      <p class="description">Insira o seu endereço completo.</p>
+
+      <form>
+        <div class="input-area">
+          <div class="label-area">
+            <p class="label mb-0">CEP</p>
+          </div>
+          <input type="text" placeholder="ex. 00000-000" id="cep" />
+        </div>
+  
+        <div class="input-area">
+          <div class="label-area mt-3">
+            <p class="label mb-0">Logradouro</p>
+          </div>
+  
+          <input
+            type="text"
+            placeholder="ex. Av. Carneiro Leão"
+            id="logradouro"
+          />
+        </div>
+  
+        <div class="input-area">
+          <div class="label-area mt-3">
+            <p class="label mb-0">Bairro</p>
+          </div>
+          <input type="text" placeholder="ex. Centro" id="bairro" />
+        </div>
+  
+        <section class="step-button-area step-2-button-area">
+          <button class="go-back-btn" routerLink="/">Voltar</button>
+          <button class="next-step-btn step-1-btn" type="submit" routerLink="/select-plan">
+            Próximo passo
+          </button>
+        </section>
+      </form>
+    </section>
+  </section>
+</section>

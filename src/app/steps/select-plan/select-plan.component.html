@@ -1,4 +1,4 @@
-<section class="step-2 step">
+<section class="step-3 step">
   <section class="steps-display">
     <div class="step-text">
       <div class="step-number">1</div>
@@ -10,20 +10,20 @@
     </div>
 
     <div class="step-text">
-      <div class="step-number current-step">2</div>
+      <div class="step-number">2</div>
 
       <div class="step-name">
         <p class="step-num">Passo 2</p>
-        <p class="step-name-text">Selecione um plano</p>
+        <p class="step-name-text">Seu Endereço</p>
       </div>
     </div>
 
     <div class="step-text">
-      <div class="step-number">3</div>
+      <div class="step-number current-step">3</div>
 
       <div class="step-name">
         <p class="step-num">Passo 3</p>
-        <p class="step-name-text">Add-ons</p>
+        <p class="step-name-text">Selecione um plano</p>
       </div>
     </div>
 
@@ -32,7 +32,7 @@
 
       <div class="step-name">
         <p class="step-num">Passo 4</p>
-        <p class="step-name-text">Summary</p>
+        <p class="step-name-text">Resumo</p>
       </div>
     </div>
   </section>
@@ -41,55 +41,57 @@
     <section class="step-text-section">
       <h1 class="step-heading">Selecione seu plano</h1>
       <p class="description">
-        You have the option of monthly or yearly billing.
+        Você tem a opção de faturamento mensal ou anual.
       </p>
 
       <section class="step-2-option-section">
         <div class="step-2-option option-clicked">
-          <img src="../../assets/icon-arcade.svg" alt="" />
+          <img src="../../assets/icon-arcade.svg" alt="Ícone do Plano Arcade" />
           <div class="option-text">
             <h2 class="planName">Arcade</h2>
             <p class="price arcade-price">
-              $<span class="price-amt">9</span>/mo
+              R$<span class="price-amt">19</span>/mês
             </p>
-            <p class="feature">2 months free</p>
+            <!-- <p class="feature">2 months free</p> -->
           </div>
         </div>
 
         <div class="step-2-option">
-          <img src="../../assets/icon-advanced.svg" alt="" />
+          <img src="../../assets/icon-advanced.svg" alt="Ícone do Plano Advanced" />
           <div class="option-text">
             <h2 class="planName">Advanced</h2>
             <p class="price advanced-price">
-              $<span class="price-amt">12</span>/mo
+              R$<span class="price-amt">25</span>/mês
             </p>
-            <p class="feature">2 months free</p>
+            <!-- <p class="feature">2 months free</p> -->
           </div>
         </div>
 
         <div class="step-2-option">
-          <img src="../../assets/icon-pro.svg" alt="" />
+          <img src="../../assets/icon-pro.svg" alt="Ícone do Plano Pro" />
           <div class="option-text">
             <h2 class="planName">Pro</h2>
-            <p class="price pro-price">$<span class="price-amt">15</span>/mo</p>
-            <p class="feature">2 months free</p>
+            <p class="price pro-price">
+              R$<span class="price-amt">32</span>/mês
+            </p>
+            <!-- <p class="feature">2 months free</p> -->
           </div>
         </div>
       </section>
 
       <section class="toggle-section">
-        <p class="toggle-monthly bold">Monthly</p>
+        <p class="toggle-monthly bold">Mensal</p>
         <div class="toggle-area">
           <div class="toggle-circle"></div>
         </div>
-        <p class="toggle-yearly">Yearly</p>
+        <p class="toggle-yearly">Anual</p>
       </section>
     </section>
 
     <section class="step-button-area step-2-button-area">
-      <button class="go-back-btn" routerLink="/">Go Back</button>
-      <button class="next-step-btn step-2-btn" routerLink="/add-ons">
-        Next Step
+      <button class="go-back-btn" routerLink="/address">Voltar</button>
+      <button class="next-step-btn step-2-btn" routerLink="/summary">
+        Próximo passo
       </button>
     </section>
   </section>
