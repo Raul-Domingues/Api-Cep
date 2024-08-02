@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalStorageService } from '../../local-storage.service';
+import { LocalStorageService } from '../../services/local-storage.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { ViaCepService } from '../../services/via-cep.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-address',
@@ -15,7 +17,9 @@ export class AddressComponent implements OnInit {
   constructor(
     private localStorageService: LocalStorageService,
     private fb: FormBuilder,
-    private http: HttpClient
+    private http: HttpClient,
+    private viaCepService: ViaCepService,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -25,22 +29,37 @@ export class AddressComponent implements OnInit {
       bairro: ['', Validators.required],
       cidade: ['', Validators.required],
     });
+
+    const savedData = this.localStorageService.getItem('form2');
+    if (savedData) {
+      this.form.patchValue(savedData);
+    }
   }
 
-  goToStep3() {}
+  goToStep3() {
+    console.log(this.form.value);
+    if(this.form.valid) {
+      this.localStorageService.setItem('form2', this.form.value);
+      this.router.navigate(['/select-plan']);
+    }
+  }
 
-  getAddress(cepValue: Event) {
-    const inputElement = cepValue.target as HTMLInputElement;
-    const address = inputElement.value;
-    console.log(address);
-
-    // cep = address.replace(/\D/g, '');
-
-    // if (cep != '') {
-    //   let validaCep = /^[0-9]{8}$/;
-
-    //   if (validaCep.test(cep)) {
-    //   }
-    // }
+  getAddress() {
+    const cep = this.form.get('cep')?.value;
+    if(cep) {
+      this.viaCepService.getAddressByCep(cep).subscribe({
+        next: data => {
+          if(data.erro) {
+            alert('CEP não encontrado');
+            return;
+          }
+          this.form.patchValue({
+            logradouro: data.logradouro,
+            bairro: data.bairro,
+            cidade: data.localidade + ' - ' + data.uf,
+          })
+        }
+      })
+    }
   }
 }
