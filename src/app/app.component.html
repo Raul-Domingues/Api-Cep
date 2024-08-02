@@ -1,3 +1,5 @@
+<div [@routeAnimations]="prepareRoute(outlet)">
 <main>
-  <router-outlet></router-outlet>
-</main>
+    <router-outlet #outlet="outlet"></router-outlet>
+  </main>
+</div>

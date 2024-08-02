@@ -9,18 +9,22 @@ export const routes: Routes = [
   {
     path: '',
     component: PersonalInfoComponent,
+    data: { animation: 'personal-info' }
   },
   {
     path: 'address',
-    component: AddressComponent 
+    component: AddressComponent,
+    data: { animation: 'address' } 
   },
   {
     path: 'select-plan',
-    component: SelectPlanComponent
+    component: SelectPlanComponent,
+    data: { animation: 'select-plan' }
   },
   {
     path: 'summary',
-    component: SummaryComponent
+    component: SummaryComponent,
+    data: { animation: 'summary' }
   },
 ];
 

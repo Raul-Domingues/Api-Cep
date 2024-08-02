@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 import { ViaCepService } from '../../services/via-cep.service';
 import { Router } from '@angular/router';
 
@@ -17,7 +15,6 @@ export class AddressComponent implements OnInit {
   constructor(
     private localStorageService: LocalStorageService,
     private fb: FormBuilder,
-    private http: HttpClient,
     private viaCepService: ViaCepService,
     private router: Router,
   ) {}

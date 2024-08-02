@@ -45,7 +45,12 @@
       </p>
 
       <section class="step-2-option-section">
-        <div class="step-2-option option-clicked">
+        <div
+          class="step-2-option option-clicked"
+          #arcade
+          (click)="selectPlan('arcade')"
+          [ngClass]="{ 'option-clicked': selectedPlan === 'arcade' }"
+        >
           <img src="../../assets/icon-arcade.svg" alt="Ícone do Plano Arcade" />
           <div class="option-text">
             <h2 class="planName">Arcade</h2>
@@ -55,8 +60,16 @@
           </div>
         </div>
 
-        <div class="step-2-option">
-          <img src="../../assets/icon-advanced.svg" alt="Ícone do Plano Advanced" />
+        <div
+          class="step-2-option"
+          #advanced
+          (click)="selectPlan('advanced')"
+          [ngClass]="{ 'option-clicked': selectedPlan === 'advanced' }"
+        >
+          <img
+            src="../../assets/icon-advanced.svg"
+            alt="Ícone do Plano Advanced"
+          />
           <div class="option-text">
             <h2 class="planName">Advanced</h2>
             <p class="price advanced-price">
@@ -65,7 +78,12 @@
           </div>
         </div>
 
-        <div class="step-2-option">
+        <div
+          class="step-2-option"
+          #pro
+          (click)="selectPlan('pro')"
+          [ngClass]="{ 'option-clicked': selectedPlan === 'pro' }"
+        >
           <img src="../../assets/icon-pro.svg" alt="Ícone do Plano Pro" />
           <div class="option-text">
             <h2 class="planName">Pro</h2>
@@ -75,12 +93,10 @@
           </div>
         </div>
       </section>
-
+      
       <section class="toggle-section">
         <p class="toggle-monthly bold">Mensal</p>
-        <div class="toggle-area">
-          <div class="toggle-circle"></div>
-        </div>
+        <mat-slide-toggle></mat-slide-toggle>
         <p class="toggle-yearly">Anual</p>
       </section>
     </section>

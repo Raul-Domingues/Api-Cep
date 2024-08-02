@@ -1,14 +1,14 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ViaCepService {
-    constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-    getAddressByCep(cep: string): Observable<any> {
-        return this.http.get(`https://viacep.com.br/ws/${cep}/json/`);
-    }
+  getAddressByCep(cep: string): Observable<any> {
+    return this.http.get(`https://viacep.com.br/ws/${cep}/json/`);
+  }
 }

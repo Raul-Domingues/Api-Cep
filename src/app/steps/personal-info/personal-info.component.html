@@ -54,6 +54,7 @@
           id="name"
           formControlName="nome"
         />
+        <small *ngIf="form.get('nome')?.errors"></small>
       </div>
 
       <div class="input-area">
