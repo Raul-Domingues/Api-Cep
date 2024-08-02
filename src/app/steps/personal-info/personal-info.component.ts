@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LocalStorageService } from '../../local-storage.service';
+import { LocalStorageService } from '../../services/local-storage.service';
 @Component({
   selector: 'app-personal-info',
   templateUrl: './personal-info.component.html',

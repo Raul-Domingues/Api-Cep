@@ -49,10 +49,10 @@
           </div>
           <input
             type="text"
-            placeholder="ex. 00000-000"
+            placeholder="ex. 01001-000"
             id="cep"
             formControlName="cep"
-            (blur)="getAddress($event)"
+            (blur)="getAddress()"
           />
         </div>
 
@@ -98,7 +98,6 @@
           <button
             class="next-step-btn step-1-btn"
             type="submit"
-            routerLink="/select-plan"
           >
             Próximo passo
           </button>

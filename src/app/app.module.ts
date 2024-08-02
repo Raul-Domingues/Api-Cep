@@ -17,6 +17,8 @@ import { SelectPlanComponent } from './steps/select-plan/select-plan.component';
 import { SummaryComponent } from './steps/summary/summary.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     RouterModule,
     ReactiveFormsModule,
+    MatSlideToggleModule
   ],
   providers: [provideClientHydration(), provideHttpClient(withFetch())],
   bootstrap: [AppComponent],
