@@ -46,7 +46,7 @@
 
       <section class="step-2-option-section">
         <div
-          class="step-2-option option-clicked"
+          class="step-2-option"
           #arcade
           (click)="selectPlan('arcade')"
           [ngClass]="{ 'option-clicked': selectedPlan === 'arcade' }"
@@ -54,9 +54,7 @@
           <img src="../../assets/icon-arcade.svg" alt="Ícone do Plano Arcade" />
           <div class="option-text">
             <h2 class="planName">Arcade</h2>
-            <p class="price arcade-price">
-              R$<span class="price-amt">19</span>/mês
-            </p>
+            <p class="price arcade-price">R$<span>19</span>/mês</p>
           </div>
         </div>
 
@@ -72,9 +70,7 @@
           />
           <div class="option-text">
             <h2 class="planName">Advanced</h2>
-            <p class="price advanced-price">
-              R$<span class="price-amt">25</span>/mês
-            </p>
+            <p class="price advanced-price">R$<span>25</span>/mês</p>
           </div>
         </div>
 
@@ -87,24 +83,25 @@
           <img src="../../assets/icon-pro.svg" alt="Ícone do Plano Pro" />
           <div class="option-text">
             <h2 class="planName">Pro</h2>
-            <p class="price pro-price">
-              R$<span class="price-amt">32</span>/mês
-            </p>
+            <p class="price pro-price">R$<span>32</span>/mês</p>
           </div>
         </div>
       </section>
 
       <section class="toggle-section">
         <p class="toggle-monthly bold">Mensal</p>
-        <mat-slide-toggle class="toggle-switch" #teste></mat-slide-toggle>
+        <mat-slide-toggle
+          class="toggle-switch"
+          (toggleChange)="toggleChange()"
+        ></mat-slide-toggle>
         <p class="toggle-yearly">Anual</p>
       </section>
     </section>
 
     <section class="step-button-area step-2-button-area">
       <button class="go-back-btn" routerLink="/address">Voltar</button>
-      <button class="next-step-btn step-2-btn" routerLink="/summary">
-        Próximo passo
+      <button type="submit" class="next-step-btn step-2-btn" (click)="nextStep()">
+        Contratar
       </button>
     </section>
   </section>
