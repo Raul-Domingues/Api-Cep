@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../../services/local-storage.service';
+
 @Component({
   selector: 'app-personal-info',
   templateUrl: './personal-info.component.html',
@@ -18,9 +19,9 @@ export class PersonalInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      nome: [null, Validators.required],
-      email: [null, [Validators.required, Validators.email]],
-      celular: [null, Validators.required],
+      nome: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email]],
+      celular: ['', [Validators.required, Validators.minLength(11)]],
     });
 
     const savedData = this.localStorage.getItem('form1');

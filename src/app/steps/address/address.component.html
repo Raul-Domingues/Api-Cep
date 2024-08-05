@@ -53,7 +53,20 @@
             id="cep"
             formControlName="cep"
             (blur)="getAddress()"
+            mask="00000-000"
           />
+          <small
+            *ngIf="
+              form.get('cep')?.touched && form.get('cep')?.hasError('minlength')
+            "
+            >CEP inválido.</small
+          >
+          <small
+            *ngIf="
+              form.get('cep')?.touched && form.get('cep')?.hasError('required')
+            "
+            >Campo obrigatório.</small
+          >
         </div>
 
         <div class="input-area">
@@ -95,10 +108,7 @@
 
         <section class="step-button-area step-2-button-area mt-4">
           <button class="go-back-btn" routerLink="/">Voltar</button>
-          <button
-            class="next-step-btn step-1-btn"
-            type="submit"
-          >
+          <button class="next-step-btn step-1-btn" type="submit">
             Próximo passo
           </button>
         </section>

@@ -4,7 +4,7 @@ import {
   withFetch,
 } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {
   BrowserModule,
@@ -19,6 +19,7 @@ import { AddressComponent } from './steps/address/address.component';
 import { PersonalInfoComponent } from './steps/personal-info/personal-info.component';
 import { SelectPlanComponent } from './steps/select-plan/select-plan.component';
 import { SummaryComponent } from './steps/summary/summary.component';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -37,8 +38,15 @@ import { SummaryComponent } from './steps/summary/summary.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
+    FormsModule,
   ],
-  providers: [provideClientHydration(), provideHttpClient(withFetch())],
+  providers: [
+    provideClientHydration(),
+    provideHttpClient(withFetch()),
+    provideNgxMask(),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

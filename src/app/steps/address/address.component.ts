@@ -21,7 +21,7 @@ export class AddressComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      cep: ['', Validators.required],
+      cep: ['', [Validators.required, Validators.minLength(8)]],
       logradouro: ['', Validators.required],
       bairro: ['', Validators.required],
       cidade: ['', Validators.required],

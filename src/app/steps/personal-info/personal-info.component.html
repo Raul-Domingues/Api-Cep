@@ -51,10 +51,21 @@
         <input
           type="text"
           placeholder="ex. Raul Domingues"
-          id="name"
+          id="nome"
           formControlName="nome"
         />
-        <small *ngIf="form.get('nome')?.errors"></small>
+        <small
+          *ngIf="
+            form.get('nome')?.touched && form.get('nome')?.hasError('required')
+          "
+          >Digite o seu nome.</small
+        >
+        <small
+          *ngIf="
+            form.get('nome')?.touched && form.get('nome')?.hasError('minlength')
+          "
+          >Deve contér no mínimo 3 caracteres</small
+        >
       </div>
 
       <div class="input-area">
@@ -64,10 +75,23 @@
 
         <input
           type="email"
-          placeholder="ex. raulhdomingues@gmail.com"
+          placeholder="ex. exemplo@gmail.com"
           id="email"
           formControlName="email"
         />
+        <small
+          *ngIf="
+            form.get('email')?.touched &&
+            form.get('email')?.hasError('required')
+          "
+          >Campo obrigatório.</small
+        >
+        <small
+          *ngIf="
+            form.get('email')?.touched && form.get('email')?.hasError('email')
+          "
+          >Formato de e-mail inválido</small
+        >
       </div>
 
       <div class="input-area">
@@ -76,14 +100,34 @@
         </div>
         <input
           type="text"
-          placeholder="ex. 4499999999"
-          id="phone"
+          placeholder="ex. (44) 99999-9999"
+          id="celular"
           formControlName="celular"
+          mask="(00) 00000-0000"
         />
+        <small
+          *ngIf="
+            form.get('celular')?.touched &&
+            form.get('celular')?.hasError('required')
+          "
+          >Campo obrigatório.</small
+        >
+        <small
+          *ngIf="
+            form.get('celular')?.touched &&
+            form.get('celular')?.hasError('minlength')
+          "
+        >
+          Formato inválido
+        </small>
       </div>
 
       <section class="step-button-area step-1-button-area mt-5">
-        <button class="next-step-btn step-1-btn" type="submit">
+        <button
+          class="next-step-btn step-1-btn"
+          type="submit"
+          [disabled]="!form.valid"
+        >
           Próximo passo
         </button>
       </section>
