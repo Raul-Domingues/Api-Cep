@@ -24,13 +24,22 @@ button {
 }
 
 main {
+  display: flex;
+  gap: 30px;
   margin: 105px auto;
-  width: 940px;
+  width: 850px;
   height: 600px;
   background-color: #fff;
   border-radius: 20px;
   padding: 16px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+}
+
+.step-form-section {
+  // width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .step {
@@ -48,12 +57,7 @@ main {
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-}
-
-.step-text {
-  display: flex;
-  gap: 16px;
+  gap: 35px;
 }
 
 .step-number {
@@ -67,19 +71,11 @@ main {
   font-weight: 500;
 }
 
-.step-name {
-  text-transform: uppercase;
-}
-
 .step-num {
   font-weight: 400;
   color: #d6d9e6;
   font-size: 14px;
   margin-bottom: 0;
-}
-
-.step-name-text {
-  font-weight: 700;
 }
 
 .current-step {
@@ -88,31 +84,19 @@ main {
   border: none;
 }
 
-.step-form-section {
-  flex-grow: 1;
-  padding: 16px 84px 16px 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+.step-2-option-section {
+  gap: 10px;
 }
 
 .step-heading {
-  margin-top: 18px;
   color: #02295a;
   font-size: 35px;
 }
 
 .description {
-  margin-top: 15px;
   color: #9699ab;
   font-weight: 400;
-}
-
-.label-area {
-  margin-top: 38px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .label {
@@ -144,9 +128,8 @@ small {
 
 .step-button-area {
   width: 100%;
-  justify-content: flex-end;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
 }
 
 .next-step-btn {
@@ -157,9 +140,6 @@ small {
 .next-step-btn:hover {
   background-color: #154a8a;
   color: #eaffff;
-}
-.option-text {
-  margin-top: 37px;
 }
 
 .price {
@@ -183,143 +163,18 @@ small {
   color: #02295a;
 }
 
-.left-section {
-  display: flex;
-  align-items: center;
-  gap: 23px;
-}
+// @media screen and (max-width: 960px) {
+//   .step-text-section {
+//     width: 428px;
+//   }
+// }
 
-.click-option {
-  width: 18px;
-  height: 18px;
-  border: 1px solid #d6d9e6;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.confirm-btn {
-  background-color: #473dff;
-  padding: 15px 32px;
-}
-
-.confirm-btn:hover {
-  background-color: #928cfe;
-}
-
-.bill-section {
-  margin-top: 40px;
-  width: 100%;
-  height: auto;
-  background-color: #fafbff;
-  border-radius: 8px;
-  padding: 30px 23px;
-  display: flex;
-  flex-direction: column;
-}
-
-.selected-plan {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.final-plan-text {
-  color: #02295a;
-  font-weight: 500;
-  margin-bottom: 7px;
-}
-
-.selected-plan-price {
-  font-weight: 700;
-  color: #02295a;
-}
-
-.change-plan {
-  color: #9699ab;
-  transition: 0.2s ease-in-out;
-}
-
-.change-plan:hover {
-  color: #473dff;
-}
-
-.divider {
-  display: none;
-  margin-top: 23px;
-  border: none;
-  height: 1px;
-  background-color: #d6d9e6;
-}
-
-.selected-add-on-section {
-  margin-top: 17px;
-  display: flex;
-  flex-direction: column;
-  gap: 17px;
-}
-
-.selected-add-on {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0;
-}
-
-.final-addon-text {
-  color: #9699ab;
-  font-size: 15px;
-}
-
-.selected-addon-price {
-  font-weight: 400;
-  color: #02295a;
-}
-
-.total-price-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 28px 23px;
-}
-
-.total-text {
-  color: #9699ab;
-  font-size: 14px;
-}
-
-.total-price {
-  color: #473dff;
-  font-size: 19px;
-  font-weight: 700;
-}
-
-
-
-@media screen and (max-width: 960px) {
-  main {
-    width: 95%;
-  }
-  .steps-display {
-    width: 230px;
-    padding: 40px 10px 40px 32px;
-  }
-  .step-form-section {
-    padding: 16px 60px;
-  }
-
-  .step-1-button-area {
-    margin-top: 60px;
-  }
-}
-
-@media screen and (max-width: 913px) {
+// @media screen and (max-width: 913px) {
   
-  .step-form-section {
-    width: 60%;
-  }
-}
+//   .step-form-section {
+//     width: 60%;
+//   }
+// }
 
 @media screen and (max-width: 780px) {
   main {
@@ -347,9 +202,7 @@ small {
   .step-number {
     margin-top: 32px;
   }
-  .step-name {
-    display: none;
-  }
+
   .step-form-section {
     padding: 16px 24px 24px;
     width: 426px;
@@ -360,20 +213,17 @@ small {
   }
 }
 
-@media screen and (max-width: 550px) {
-  .option-text {
-    margin-top: 0;
-  }
-  .step-heading {
-    font-size: 28px;
-  }
-  .step-3-option {
-    padding: 15px;
-  }
-  .left-section {
-    gap: 15px;
-  }
-  .bill-section {
-    padding: 20px 16px;
-  }
-}
+// @media screen and (max-width: 550px) {
+//   .option-text {
+//     margin-top: 0;
+//   }
+//   .step-heading {
+//     font-size: 28px;
+//   }
+//   .step-3-option {
+//     padding: 15px;
+//   }
+//   .left-section {
+//     gap: 15px;
+//   }
+// }

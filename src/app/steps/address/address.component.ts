@@ -34,7 +34,6 @@ export class AddressComponent implements OnInit {
   }
 
   goToStep3() {
-    console.log(this.form.value);
     if(this.form.valid) {
       this.localStorageService.setItem('form2', this.form.value);
       this.router.navigate(['/select-plan']);

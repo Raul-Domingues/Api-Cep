@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './select-plan.component.html',
   styleUrl: './select-plan.component.scss',
 })
-export class SelectPlanComponent implements OnInit {
+export class SelectPlanComponent {
   selectedPlan!: string;
   duration: string = 'monthly'
 
@@ -19,10 +19,6 @@ export class SelectPlanComponent implements OnInit {
     private localStorage: LocalStorageService,
     private fb: FormBuilder
   ) {}
-
-  ngOnInit(): void {
-    console.log('teste no ngOnInit');
-  }
 
   toggleChange() {
     this.duration = this.duration === 'monthly' ? 'yearly' : 'monthly';
