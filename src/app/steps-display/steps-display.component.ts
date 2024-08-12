@@ -1,19 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-steps-display',
   templateUrl: './steps-display.component.html',
   styleUrl: './steps-display.component.scss',
 })
-export class StepsDisplayComponent implements OnInit {
+export class StepsDisplayComponent {
   numero!: number;
   passo!: string;
   titulo!: string;
 
   @Input() currentStep!: string;
-
-  constructor(private router: Router) {}
 
   steps = [
     {
@@ -37,7 +34,4 @@ export class StepsDisplayComponent implements OnInit {
       titulo: 'Resumo',
     },
   ];
-
-  ngOnInit(): void {}
-
 }
