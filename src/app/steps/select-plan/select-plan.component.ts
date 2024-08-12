@@ -13,6 +13,7 @@ export class SelectPlanComponent {
   duration: string = 'monthly'
 
   planForm!: FormGroup;
+  currentStep = 'Passo 3';
 
   constructor(
     private router: Router,

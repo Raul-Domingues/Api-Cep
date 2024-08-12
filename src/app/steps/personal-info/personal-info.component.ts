@@ -10,6 +10,7 @@ import { LocalStorageService } from '../../services/local-storage.service';
 })
 export class PersonalInfoComponent implements OnInit {
   form!: FormGroup;
+  currentStep = 'Passo 1';
 
   constructor(
     private fb: FormBuilder,

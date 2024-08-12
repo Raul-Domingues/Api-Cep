@@ -1,8 +1,8 @@
 <section class="steps-display">
   <div class="step-text d-flex gap-3" *ngFor="let step of steps">
-    <div class="step-number">{{ step.numero }}</div>
+    <div class="step-number" [ngClass]="currentStep === step.passo ? 'current-step' : ''" >{{ step.numero }}</div>
 
-    <div class="text-uppercase">
+    <div class="step-info text-uppercase">
       <p class="step-num">{{ step.passo }}</p>
       <p class="fw-bold">{{ step.titulo }}</p>
     </div>

@@ -23,8 +23,6 @@ button {
 }
 
 main {
-  display: flex;
-  gap: 30px;
   margin: 100px auto;
   width: 850px;
   height: 600px;
@@ -36,6 +34,7 @@ main {
 
 .step {
   display: flex;
+  gap: 50px;
   width: 100%;
   height: 100%;
 }
@@ -131,24 +130,112 @@ small {
   color: #02295a;
 }
 
-// @media screen and (max-width: 960px) {
-//   .step-text-section {
-//     width: 428px;
-//   }
-// }
+.step-2-option-section {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-// @media screen and (max-width: 913px) {
-  
-//   .step-form-section {
-//     width: 60%;
-//   }
-// }
+.step-2-option {
+  width: 136px;
+  border: 1px solid #9699ab;
+  border-radius: 10px;
+  padding: 19px 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.15s ease-in-out;
+}
+
+.option-clicked {
+  background-color: #f0f6ff;
+  border-color: #473dff;
+}
+
+.step-2-option:hover {
+  border-color: #473dff;
+}
+
+.step-2-option img {
+  width: 40px;
+  height: 40px;
+}
+
+.step-2-option h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #02295a;
+}
+
+.step-2-button-area {
+  justify-content: space-between;
+}
+
+.toggle-section {
+  margin-top: 33px;
+  border-radius: 8px;
+  width: 100%;
+  padding: 14px;
+  background-color: #f0f6ff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 14px;
+  color: #9699ab;
+  font-weight: 500;
+}
+
+.steps-display {
+  width: 274px;
+  height: 100%;
+  background-image: url("./assets/bg-sidebar-desktop.svg");
+  border-radius: 10px;
+  padding: 40px 32px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.step-number {
+  width: 33px;
+  height: 33px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.step-num {
+  font-weight: 400;
+  color: #d6d9e6;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.step-2-button-area {
+  justify-content: space-between;
+}
+
+.label-area {
+  margin: 5px;
+}
+
+input {
+  margin: 0;
+}
+
 
 @media screen and (max-width: 780px) {
   main {
     z-index: 5;
-    width: 92%;
-    margin-top: 99px;
+    width: 90%;
+    margin-top: 100px;
     padding: 0;
     height: auto;
   }
@@ -173,25 +260,71 @@ small {
 
   .step-form-section {
     padding: 16px 24px 24px;
-    width: 426px;
-    justify-content: flex-start;
+    width: 100%;
   }
   .step {
     height: auto;
+    width: 100%;
+    gap: 0;
+  }
+
+  .step-2-button-area {
+    margin-top: 50px;
+  }
+
+  .steps-display {
+    z-index: -1;
+    position: absolute;
+    background-image: url("./assets/bg-sidebar-mobile.svg");
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 172px;
+    background-repeat: no-repeat;
+    flex-direction: row;
+    justify-content: center;
+    background-size: cover;
+    border-radius: 0;
+    padding: 0;
+    gap: 50px;
+  }
+  .step-number {
+    margin-top: 32px;
+  }
+
+  .step-info {
+    display: none;
   }
 }
 
-// @media screen and (max-width: 550px) {
-//   .option-text {
-//     margin-top: 0;
-//   }
-//   .step-heading {
-//     font-size: 28px;
-//   }
-//   .step-3-option {
-//     padding: 15px;
-//   }
-//   .left-section {
-//     gap: 15px;
-//   }
-// }
+@media screen and (max-width: 550px) {
+  .option-text {
+    margin-top: 0;
+  }
+  .step-heading {
+    font-size: 28px;
+  }
+  .step-3-option {
+    padding: 15px;
+  }
+  .left-section {
+    gap: 15px;
+  }
+
+  .step-2-option-section {
+    margin-top: 22px;
+    flex-direction: column;
+  }
+  .step-2-option {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .toggle-section {
+    margin-top: 24px;
+  }
+}
+

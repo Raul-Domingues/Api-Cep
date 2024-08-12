@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AddressComponent implements OnInit {
   form!: FormGroup;
+  currentStep = 'Passo 2';
 
   constructor(
     private localStorageService: LocalStorageService,
